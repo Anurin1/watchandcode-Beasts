@@ -34,12 +34,11 @@ function toFixed(num, precision = 0) {
   var roundedNumString = Math.round(multipledNum) + "";
 
   if (precision === 0) {
-    return roundedNumString;
+    return roundedNumString ;
   }
 
   //returns decimal point separator back to its original position
-  numString = roundedNumString + "";
-  numArr = numString.split("");
+  numArr = roundedNumString.split("");
   numArr.splice(-precision, 0, decimal);
 
   var result = Number(numArr.join(""));
