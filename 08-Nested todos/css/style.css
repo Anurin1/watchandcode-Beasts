@@ -1,0 +1,267 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  background: url("../img/background.jpg") no-repeat;
+  background-size: cover;
+}
+
+ul {
+  -webkit-padding-start: 40px;
+  padding-inline-start: 40px;
+  list-style: none;
+}
+
+.todolist {
+  width: 1000px;
+  margin: 10px auto;
+  padding: 15px 15px 12px;
+  overflow-x: auto;
+  background: rgba(165, 165, 165, 0.2);
+  border-radius: 4px;
+}
+
+.wrapper {
+ 
+}
+
+.todolist__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.todolist__button {
+  border: 0;
+  outline: 0;
+  background: #353535;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 80px;
+  padding: 4px 5px 4px 0px;
+  border-radius: 3px;
+  font-size: 10px;
+  color: #a5a5a5;
+  margin-left: 3px;
+  cursor: pointer;
+  position: relative;
+}
+
+.todolist__button svg {
+  width: 20px;
+}
+
+.todolist__button:hover {
+  color: #fff;
+}
+
+.todolist__button:hover svg {
+  fill: #fff;
+}
+
+.todolist__button:active {
+  top: 1px;
+}
+
+.todolist__button svg {
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+.todolist__icon {
+  fill: #a5a5a5;
+  cursor: pointer;
+  margin-right: 10px;
+  z-index: 9;
+}
+
+.todolist__icon:hover {
+  fill: black;
+}
+
+.is-smaller {
+  width: 60px;
+}
+
+.todolist__top-bar {
+  background: rgba(35, 35, 35, 0.9);
+  padding: 12px 10px;
+  border-radius: 3px;
+  margin-bottom: 3px;
+}
+
+.todolist__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.todolist__input {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  font-size: 15px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-weight: 400;
+  color: #fff;
+}
+
+.todolist__input::-webkit-input-placeholder {
+  color: #a5a5a5;
+}
+
+.todolist__input::-moz-placeholder {
+  color: #a5a5a5;
+}
+
+.todolist__input:-ms-input-placeholder {
+  color: #a5a5a5;
+}
+
+.todolist__input::-ms-input-placeholder {
+  color: #a5a5a5;
+}
+
+.todolist__input::placeholder {
+  color: #a5a5a5;
+}
+
+.todolist__input :focus {
+  color: #fff;
+}
+
+.todolist__todo {
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 2px;
+  border-radius: 3px;
+  position: relative;
+}
+
+/* checkbox */
+.is-completed .todolist__todo-label {
+  color: #a5a5a5;
+  text-decoration: line-through;
+}
+
+.todolist__checkbox {
+  margin-right: 10px;
+  cursor: pointer;
+  height: 17px;
+  width: 17px;
+  position: relative;
+}
+
+.todolist__checkbox:hover {
+  background-color: blue;
+}
+
+.todolist__checkbox::before {
+  content: "";
+  height: 18px;
+  width: 18px;
+  background: white;
+  border-radius: 2px;
+  border: 1px solid #a5a5a5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.todolist__checkbox:hover.todolist__checkbox::before {
+  background: #d1d1d1;
+}
+
+.todolist__checkbox::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  width: 5px;
+  height: 10px;
+  border: 2px solid #353535;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(40deg);
+  opacity: 0;
+}
+
+.todolist__checkbox:checked.todolist__checkbox::before {
+  background: #a5a5a5;
+}
+
+.todolist__checkbox:checked.todolist__checkbox::after {
+  opacity: 1;
+}
+
+/* label */
+.todolist__todo-label {
+  font-size: 14px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+/* icons */
+.is-subtodo {
+  width: 300px;
+  font-size: 12px;
+  padding: 7px 10px;
+}
+
+.is-subtodo .todolist__todo-label {
+  font-size: 13px;
+}
+
+.todolist__todos {
+  margin-top: 5px;
+  padding-left: 0;
+}
+
+.todolist__todo-input {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 5px 0px;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.is-white:hover {
+  fill: #fff;
+}
